@@ -49,8 +49,8 @@ export default function Register() {
     });
 
     return (
-        <section className="flex items-center bg-gray-100 min-h-screen">
-            <div className="mx-auto w-96">
+        <section className="flex items-center bg-gray-100 min-h-screen m-2">
+            <div className="mx-auto w-96 h-auto ">
                 <div className="text-center mb-8">
                     <svg
                         width="33"
@@ -76,6 +76,7 @@ export default function Register() {
                     requiredMark="optional"
                 >
                     <Form.Item
+                        className="mb-4"
                         name="name"
                         rules={[
                             {
@@ -88,6 +89,7 @@ export default function Register() {
                     </Form.Item>
 
                     <Form.Item
+                        className="mb-4"
                         name="email"
                         rules={[
                             {
@@ -101,6 +103,7 @@ export default function Register() {
                     </Form.Item>
 
                     <Form.Item
+                        className="mb-4"
                         name="phone"
                         rules={[
                             {
@@ -122,6 +125,7 @@ export default function Register() {
 
 
                     <Form.Item
+                        className="mb-4"
                         name="gender"
                         label="Gender"
                         rules={[
@@ -131,7 +135,7 @@ export default function Register() {
                             },
                         ]}
                     >
-                        <Radio.Group>
+                        <Radio.Group >
                             <Radio value="male">Male</Radio>
                             <Radio value="female">Female</Radio>
                             <Radio value="other">Other</Radio>
@@ -139,6 +143,7 @@ export default function Register() {
                     </Form.Item>
 
                     <Form.Item
+                        className="mb-4"
                         name="dob"
                         label="Date of birth"
                         rules={[
@@ -183,6 +188,7 @@ export default function Register() {
                     </Form.Item>
 
                     <Form.Item
+                        className="mb-4"
                         name="address"
                         rules={[
                             {
@@ -196,6 +202,7 @@ export default function Register() {
                     </Form.Item>
 
                     <Form.Item
+                        className="mb-4"
                         name="password"
                         // extra="Password needs to be at least 8 characters."
                         rules={[
@@ -209,6 +216,7 @@ export default function Register() {
                         ]}
                     >
                         <Input.Password
+
                             prefix={<LockOutlined />}
                             type="password"
                             placeholder="Password"
@@ -216,6 +224,7 @@ export default function Register() {
                     </Form.Item>
 
                     <Form.Item
+                        className="mb-4"
                         name="confirm"
                         dependencies={['password']}
                         hasFeedback
@@ -228,6 +237,7 @@ export default function Register() {
                         ]}
                     >
                         <Input.Password
+
                             prefix={<LockOutlined />}
                             type="password"
                             placeholder="Confirm Password"
@@ -235,6 +245,7 @@ export default function Register() {
                     </Form.Item>
 
                     <Form.Item
+                        className="mb-4"
                         name="agreement"
                         valuePropName="checked"
                         rules={[
@@ -249,12 +260,11 @@ export default function Register() {
                         </Checkbox>
                     </Form.Item>
 
-
                     <Form.Item className="mb-0">
-                        <Button block type="primary" htmlType="submit">
+                        <Button block type="primary" htmlType="submit" className="mb-4" >
                             Sign up
                         </Button>
-                        <div className="text-center mt-6">
+                        <div className="text-center">
                             <p className="text-gray-500">Already have an account?</p>{" "}
                             <a href="/login" className="text-blue-500">
                                 Sign in

@@ -16,7 +16,7 @@ export default function Login() {
     };
 
     return (
-        <section className="flex items-center bg-gray-100 min-h-screen">
+        <section className="flex items-center bg-white-100 min-h-screen">
             <div className="mx-auto w-96">
                 <div className="text-center mb-8">
                     <svg

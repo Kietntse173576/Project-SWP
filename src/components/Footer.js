@@ -8,6 +8,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import ZaloIcon from '@mui/icons-material/Chat';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import { Input } from 'antd';
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -15,7 +16,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-white border-t border-gray-200 mt-auto w-full">
+        <footer className="bg-orange-200 border-t border-gray-200 mt-auto w-full">
             <div className="container mx-auto py-8 w-full">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-2 self-end">
@@ -72,8 +73,8 @@ export default function Footer() {
                         <h3 className="font-bold flex items-center">
                             ĐĂNG KÝ NHẬN BẢN TIN
                         </h3>
-                        <div className="flex items-center border p-2 w-full">
-                            <input type="email" placeholder="Nhập email..." className="flex-grow outline-none" />
+                        <div className="flex items-center p-2 w-full">
+                            <Input type="email" placeholder="Nhập email..." className="flex-grow outline-none" />
                             <PlayCircleIcon className="text-red-500 ml-2 cursor-pointer" />
                         </div>
                     </div>
