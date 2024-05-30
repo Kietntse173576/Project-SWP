@@ -136,9 +136,8 @@ export default function Home() {
                                 </Link>
                             ))}
                         </div>
-                        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/AmiJ2_EJrdA" title="VUI CHO EM CÒN AI BÙN CHO TUI - michael hư đốn x jimmi ngủyên" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                        <div className="mt-8">
-                            <img src="/assets/images/banner-right.png.png" alt="Ưu Đãi" className="w-full h-full object-cover" />
+                        <div >
+                            <img src="/assets/images/banner-right.png.png" alt="Ưu Đãi" className="w-48 h-auto object-cover" />
                         </div>
                     </div>
                 </div>

@@ -96,7 +96,11 @@ export default function ProductDetail() {
     const dispatch = useDispatch();
 
     const handleAddToCart = (product) => {
-        dispatch(addToCart({ product }));
+        const productToSave = {
+            ...product,
+            price: product.price ? product.price.replace(/[^0-9]/g, '') : '0'
+        };
+        dispatch(addToCart({ product: productToSave }));
     };
 
     return (
@@ -106,7 +110,6 @@ export default function ProductDetail() {
                     <li><a href="/cart" className="text-blue-500">Giỏ hàng</a></li>
                     <li><span className="mx-2"><KeyboardArrowRightIcon /></span></li>
                     <li><a href="/checkout" className="text-gray-500">Trang sức kim cương</a></li>
-
                 </ol>
             </nav>
             <div className="flex">
@@ -146,12 +149,13 @@ export default function ProductDetail() {
                         </div>
                         <a href="/size-guide" className="text-blue-500">Hướng dẫn đo size →</a>
                     </div>
+
                     <div className="my-4 flex items-center justify-between">
                         <Link to="/payment-method" className="w-full mr-2"><Button type="primary" className="w-full">MUA NGAY</Button></Link>
-                        <Button onClick={handleAddToCart} className="w-full ml-2">THÊM VÔ GIỎ HÀNG</Button>
+                        <Button onClick={() => handleAddToCart(RelatedProducts)} className="w-full ml-2">THÊM VÔ GIỎ HÀNG</Button>
                     </div>
                     <div className="my-4 flex items-center justify-between">
-                        <Button icon={<PhoneOutlined />} className="mr-2 w-full">HOTLINE: 1800 1168</Button>
+                        <Link to="/hotline" className="w-full mr-2"><Button icon={<PhoneOutlined />} className="w-full">HOTLINE: 1800 1168</Button></Link>
                         <Button icon={<MessageOutlined />} className="ml-2 w-full">CHAT VỚI TƯ VẤN VIÊN</Button>
                     </div>
                 </div>
@@ -195,7 +199,7 @@ export default function ProductDetail() {
                 </Col>
             </Row>
             <Divider />
-            <div className="container mx-auto p-4">
+            <div className="container mx-auto">
                 <Title level={4} className='w-fit'>ĐÁNH GIÁ</Title>
 
                 <div className="my-4 flex items-start justify-start space-x-2">
@@ -234,7 +238,7 @@ export default function ProductDetail() {
                     <div className="container mx-auto">
                         <Title level={4}>SẢN PHẨM CÙNG LOẠI</Title>
                         <Row gutter={[16, 16]}>
-                            {RelatedProducts.map(product => (
+                            {RelatedProducts.map((product) => (
                                 <Col span={6} key={product.id}>
                                     <Badge.Ribbon text={product.badge} color={product.badge === 'MỚI' ? 'red' : 'volcano'}>
                                         <Card

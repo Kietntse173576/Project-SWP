@@ -6,11 +6,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
+import { Divider } from 'antd';
 export default function Header() {
     return (
         <>
-            <header className="w-full bg-white border-b border-gray-200">
-                <div className="flex justify-between items-center p-4 bg-gray-100 text-sm">
+            <header className="w-full bg-orange-200 border-b border-gray-200">
+                <div className="flex justify-between items-center p-4 bg-orange-300 text-sm">
                     <div className="flex space-x-20 mx-10">
                         <span> <CorporateFareIcon /> VỀ TRANG SỨC SONG LONG</span>
                         <span> <LocationOnIcon /> HỆ THỐNG PHÂN PHỐI</span>
@@ -28,9 +29,10 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="text-center py-4">
-                    <img src="/assets/images/Song long diamond.png" alt="Song Long Diamond" className="mx-auto max-w-xs" />
+                    <Link to="/"><img src="/assets/images/Song long diamond.png" alt="Song Long Diamond" className="mx-auto max-w-xs" /></Link>
                 </div>
-                <nav className="flex justify-between space-x-2 py-4 bg-gray-100 mx-4">
+                <Divider />
+                <nav className="flex justify-center items-center space-x-10 mb-6 bg-white-100 w-full">
                     <a href="/trang-suc" className="text-black">TRANG SỨC</a>
                     <a href="/trang-suc-cuoi" className="text-black">TRANG SỨC CƯỚI</a>
                     <a href="/qua-tang" className="text-black">QUÀ TẶNG</a>
