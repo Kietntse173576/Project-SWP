@@ -16,7 +16,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-orange-200 border-t border-gray-200 mt-auto w-full">
+        <footer className="bg-orange-100 border-t border-gray-200 mt-auto w-full">
             <div className="container mx-auto py-8 w-full">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-2 self-end">
@@ -80,7 +80,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-300 my-8 w-full"></div>
+                <div className=" my-8 w-full"></div>
 
                 <div className="flex flex-col items-center">
                     <button className="bg-red-500 text-white py-2 px-4 rounded-full mb-4">

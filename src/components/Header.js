@@ -10,7 +10,7 @@ import { Divider } from 'antd';
 export default function Header() {
     return (
         <>
-            <header className="w-full bg-orange-200 border-b border-gray-200">
+            <header className="w-full bg-white border-b border-gray-200">
                 <div className="flex justify-between items-center p-4 bg-orange-300 text-sm">
                     <div className="flex space-x-20 mx-10">
                         <span> <CorporateFareIcon /> VỀ TRANG SỨC SONG LONG</span>
@@ -37,7 +37,7 @@ export default function Header() {
                     <a href="/trang-suc-cuoi" className="text-black">TRANG SỨC CƯỚI</a>
                     <a href="/qua-tang" className="text-black">QUÀ TẶNG</a>
                     <a href="/bo-suu-tap" className="text-black">BỘ SƯU TẬP MỚI</a>
-                    <a href="/discount" className="text-black">KHUYẾN MÃI</a>
+                    <a href="/discount" className="text-red-600">KHUYẾN MÃI</a>
                     <a href="/news" className="text-black">TIN TỨC</a>
                 </nav>
             </header>
