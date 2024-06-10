@@ -32,6 +32,22 @@ export default function Cart() {
             price: 46060000,
             quantity: quantity,
         },
+        {
+            id: 2,
+            name: "MẶT DÂY KIM CƯƠNG AFPB000040F2HA1",
+            code: "AFPB000040F2HA1",
+            image: "https://via.placeholder.com/144",
+            price: 46060000,
+            quantity: quantity,
+        },
+        {
+            id: 3,
+            name: "MẶT DÂY KIM CƯƠNG AFPB000040F2HA1",
+            code: "AFPB000040F2HA1",
+            image: "https://via.placeholder.com/144",
+            price: 46060000,
+            quantity: quantity,
+        },
     ];
 
     return (
@@ -57,11 +73,10 @@ export default function Cart() {
                                 <Typography variant="body2" className='w-fit'>MSP: {cartItems[0].code}</Typography>
                                 <div className="quantity flex items-center my-2">
                                     <Typography variant="body2" className="mr-2">Số lượng: </Typography>
-                                    <InputNumber min={1} value={quantity} onChange={handleQuantityChange} className='ml-10' />
+                                    <InputNumber min={1} value={quantity} onChange={handleQuantityChange} className='ml-1 w-14' />
                                 </div>
                                 <div className="flex mt-2">
-                                    <Button onClick={() => handleRemoveFromCart(cartItems.id)}>Xóa</Button>
-                                    <Button className='ml-6'>Để dành mua sau</Button>
+                                    <Button onClick={() => handleRemoveFromCart(cartItems[0].id)}>Xóa</Button>
                                 </div>
                             </div>
                         </div>
