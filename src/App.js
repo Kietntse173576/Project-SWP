@@ -1,35 +1,6 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-<<<<<<< HEAD
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Register from './components/Register';
-import Login from './components/Login';
-import Checkout from './components/Checkout';
-import ProductDetail from './components/ProductDetail';
-import Cart from './components/Cart';
-import PaymentMethod from './components/PaymentMethod';
-import PaymentSuccess from './components/PaymentSuccess';
-import SideBar from './staffpages/SideBar';
-import Headerv2 from './staffpages/Headerv2';
-import DashBoard from './staffpages/DashBoard';
-import AllProduct from './staffpages/AllProduct';
-import AddProduct from './staffpages/AddProduct';
-import UpdateProduct from './staffpages/UpdateProduct';
-import ManagementUser from './staffpages/ManagementUser';
-import UserDetail from './staffpages/UserDetail';
-import UserOrders from './staffpages/UserOrders';
-import OrderList from './staffpages/OrderList';
-import OrderDetail from './staffpages/OrderDetail';
-import SideBarv2 from './adminpages/SideBarv2';
-import Dashboard from './adminpages/Dashboard';
-import ManagementStaff from './adminpages/ManagementStaff';
-import StaffDetail from './adminpages/StaffDetail';
-import Headerv3 from './adminpages/Headerv3';
-
-=======
 import Header from './userpages/Header';
 import Footer from './userpages/Footer';
 import Home from './userpages/Home';
@@ -64,7 +35,6 @@ import OrderListForSaleStaff from './salestaffpages/OrderListForSaleStaff';
 import OrderDetailForSaleStaff from './salestaffpages/OrderDetailForSaleStaff';
 import Carousel from './userpages/Carousel';
 import ListProductForUser from './userpages/ListProductForUser';
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
 function App() {
   return (
     <Router>
@@ -75,10 +45,7 @@ function App() {
           element={
             <>
               <Header />
-<<<<<<< HEAD
-=======
               <Carousel />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
               <Home />
               <Footer />
             </>
@@ -88,13 +55,7 @@ function App() {
           path="/register"
           element={
             <>
-<<<<<<< HEAD
-              <Header />
               <Register />
-              <Footer />
-=======
-              <Register />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
             </>
           }
         />
@@ -102,13 +63,7 @@ function App() {
           path="/login"
           element={
             <>
-<<<<<<< HEAD
-              <Header />
               <Login />
-              <Footer />
-=======
-              <Login />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
             </>
           }
         />
@@ -123,8 +78,6 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-=======
           path="/list-product"
           element={
             <>
@@ -135,7 +88,6 @@ function App() {
           }
         />
         <Route
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           path="/product-detail/:id"
           element={
             <>
@@ -176,15 +128,9 @@ function App() {
           }
         />
 
-<<<<<<< HEAD
-        {/* Staff routes */}
-        <Route
-          path="/staff/dashboard"
-=======
         {/* Manager routes */}
         <Route
           path="/manager/dashboard"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -196,31 +142,19 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/all-products"
-=======
           path="/manager/list-products"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
               <div className="flex-1">
                 <Headerv2 />
-<<<<<<< HEAD
-                <AllProduct />
-=======
                 <ListProduct />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
               </div>
             </div>
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/add-product"
-=======
           path="/manager/add-product"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -232,11 +166,7 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/update-product/:id"
-=======
           path="/manager/update-product/:id"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -248,11 +178,7 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/management-user"
-=======
           path="/manager/management-user"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -264,11 +190,7 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/management-user/user-detail/:id"
-=======
           path="/manager/management-user/user-detail/:id"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -280,11 +202,7 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/management-user/user-orders/:id"
-=======
           path="/manager/management-user/user-orders/:id"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -296,11 +214,7 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/order-list"
-=======
           path="/manager/order-list"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -312,11 +226,7 @@ function App() {
           }
         />
         <Route
-<<<<<<< HEAD
-          path="/staff/order-list/order-detail/:id"
-=======
           path="/manager/order-list/order-detail/:id"
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
           element={
             <div className="flex">
               <SideBar />
@@ -327,9 +237,6 @@ function App() {
             </div>
           }
         />
-<<<<<<< HEAD
-
-=======
         <Route
           path="/manager/management-voucher"
           element={
@@ -416,7 +323,6 @@ function App() {
             </div>
           }
         />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
         {/* Admin routes */}
         <Route
           path="/admin/dashboard"
@@ -424,13 +330,8 @@ function App() {
             <div className="flex">
               <SideBarv2 />
               <div className="flex-1">
-<<<<<<< HEAD
-                <Headerv3 />
-                <Dashboard />
-=======
                 <Headerv2 />
                 <DashBoard />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
               </div>
             </div>
           }
@@ -441,11 +342,7 @@ function App() {
             <div className="flex">
               <SideBarv2 />
               <div className="flex-1">
-<<<<<<< HEAD
-                <Headerv3 />
-=======
                 <Headerv2 />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
                 <ManagementStaff />
               </div>
             </div>
@@ -457,11 +354,7 @@ function App() {
             <div className="flex">
               <SideBarv2 />
               <div className="flex-1">
-<<<<<<< HEAD
-                <Headerv3 />
-=======
                 <Headerv2 />
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
                 <StaffDetail />
               </div>
             </div>
@@ -471,9 +364,4 @@ function App() {
     </Router>
   );
 }
-<<<<<<< HEAD
-
 export default App;
-=======
-export default App;
->>>>>>> 035c948cd833919803e805aea2ffd562be2e5201
