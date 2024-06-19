@@ -1,7 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import "../styles/tailwind.css";
 import CorporateFareIcon from "@mui/icons-material/CorporateFare";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
@@ -48,7 +46,7 @@ export default function Header() {
         <div className="text-center py-4">
           <Link to="/">
             <img
-              src="/assets/images/Song long diamond.png"
+              src="src/assets/images/Songlong.png"
               alt="Song Long Diamond"
               className="mx-auto max-w-xs"
             />

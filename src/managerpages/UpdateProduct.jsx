@@ -19,7 +19,7 @@ const UpdateProduct = ({ product, onUpdate, onDelete }) => {
         description: product.description || "",
         componentsPrice: product.componentsPrice || "",
         laborFee: product.laborFee || "",
-        salePrice: product.salePrice || "",
+        price: product.price || "",
         status: product.status || "",
       });
       setImagePreview(product?.imageUrl || "");
@@ -28,7 +28,6 @@ const UpdateProduct = ({ product, onUpdate, onDelete }) => {
 
   const handleImageUpload = async (info) => {
     const { file } = info;
-
     try {
       // Upload file to Firebase Storage
       const storageRef = ref(storage, file.name);
@@ -78,7 +77,6 @@ const UpdateProduct = ({ product, onUpdate, onDelete }) => {
                   className="mb-4"
                 />
               </Form.Item>
-
               <Form.Item
                 name="description"
                 label="Description"
@@ -131,7 +129,7 @@ const UpdateProduct = ({ product, onUpdate, onDelete }) => {
                 <Form.Item name="componentsPrice" label="Components Price">
                   <Input placeholder="$" className="mb-4" />
                 </Form.Item>
-                <Form.Item name="salePrice" label="Sale Price">
+                <Form.Item name="price" label="Sale Price">
                   <Input placeholder="$" className="mb-4" />
                 </Form.Item>
               </div>
@@ -146,10 +144,7 @@ const UpdateProduct = ({ product, onUpdate, onDelete }) => {
                       className="h-full object-contain"
                     />
                   ) : (
-                    <img
-                      alt="Default Product Preview"
-                      className="h-full object-contain"
-                    />
+                    <span>Image Preview</span>
                   )}
                 </div>
                 <Form.Item label="Product Gallery">

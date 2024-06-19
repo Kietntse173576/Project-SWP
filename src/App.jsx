@@ -1,47 +1,45 @@
-import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './userpages/Header';
-import Footer from './userpages/Footer';
-import Home from './userpages/Home';
-import Register from './userpages/Register';
-import Login from './userpages/Login';
-import Checkout from './userpages/Checkout';
-import ProductDetail from './userpages/ProductDetail';
-import Cart from './userpages/Cart';
-import PaymentMethod from './userpages/PaymentMethod';
-import PaymentSuccess from './userpages/PaymentSuccess';
-import SideBar from './managerpages/SideBar';
-import Headerv2 from './managerpages/Headerv2';
-import DashBoard from './managerpages/DashBoard';
-import ListProduct from './managerpages/ListProduct';
-import AddProduct from './managerpages/AddProduct';
-import UpdateProduct from './managerpages/UpdateProduct';
-import ManagementUser from './managerpages/ManagementUser';
-import UserDetail from './managerpages/UserDetail';
-import UserOrders from './managerpages/UserOrders';
-import OrderList from './managerpages/OrderList';
-import OrderDetail from './managerpages/OrderDetail';
-import ManagementVoucher from './managerpages/ManagementVoucher';
-import SideBarv2 from './adminpages/SideBarv2';
-import ManagementEmployees from './adminpages/ManagementEmployees';
-import StaffDetail from './adminpages/StaffDetail';
-import SideBarv3 from './salestaffpages/SideBarv3';
-import ListDiamond from './salestaffpages/ListDiamond';
-import ListMountDiamond from './salestaffpages/ListMountDiamond';
-import StockList from './salestaffpages/StockList';
-import ListDelivered from './deliverystaffpage/ListDelivered';
-import OrderListForSaleStaff from './salestaffpages/OrderListForSaleStaff';
-import OrderDetailForSaleStaff from './salestaffpages/OrderDetailForSaleStaff';
-import Carousel from './userpages/Carousel';
-import ListProductForUser from './userpages/ListProductForUser';
-import UserInfo from './userpages/UserInfo';
-import OrderDetailForUser from './userpages/OrderDetailForUser';
-import Knowledge from './userpages/Knowledge';
-import Promotion from './userpages/Promotion'
-import ManagementStaff from './managerpages/ManagementStaff';
-import DiamondMount from './managerpages/DiamondMount';
-import OrderHistory from './userpages/OrderHistory';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./userpages/Header";
+import Footer from "./userpages/Footer";
+import Home from "./userpages/Home";
+import Register from "./userpages/Register";
+import Login from "./userpages/Login";
+import Checkout from "./userpages/Checkout";
+import ProductDetail from "./userpages/ProductDetail";
+import Cart from "./userpages/Cart";
+import PaymentMethod from "./userpages/PaymentMethod";
+import PaymentSuccess from "./userpages/PaymentSuccess";
+import SideBar from "./managerpages/SideBar";
+import Headerv2 from "./managerpages/Headerv2";
+import DashBoard from "./managerpages/DashBoard";
+import ListProduct from "./managerpages/ListProduct";
+import AddProduct from "./managerpages/AddProduct";
+import UpdateProduct from "./managerpages/UpdateProduct";
+import ManagementUser from "./managerpages/ManagementUser";
+import UserDetail from "./managerpages/UserDetail";
+import UserOrders from "./managerpages/UserOrders";
+import OrderList from "./managerpages/OrderList";
+import OrderDetail from "./managerpages/OrderDetail";
+import ManagementVoucher from "./managerpages/ManagementVoucher";
+import SideBarv2 from "./adminpages/SideBarv2";
+import ManagementEmployees from "./adminpages/ManagementEmployees";
+import StaffDetail from "./adminpages/StaffDetail";
+import SideBarv3 from "./salestaffpages/SideBarv3";
+import ListDiamond from "./salestaffpages/ListDiamond";
+import ListMountDiamond from "./salestaffpages/ListMountDiamond";
+import StockList from "./salestaffpages/StockList";
+import OrderListForDelivery from "./deliverystaffpages/OrderListForDelivery";
+import OrderListForSaleStaff from "./salestaffpages/OrderListForSaleStaff";
+import Carousel from "./userpages/Carousel";
+import ListProductForUser from "./userpages/ListProductForUser";
+import UserInfo from "./userpages/UserInfo";
+import OrderDetailForUser from "./userpages/OrderDetailForUser";
+import Knowledge from "./userpages/Knowledge";
+import Promotion from "./userpages/Promotion";
+import OrderHistory from "./userpages/OrderHistory";
+import ManagementStaff from "./managerpages/ManagementStaff";
+import DiamondMount from "./managerpages/DiamondMount";
 function App() {
   return (
     <Router>
@@ -389,7 +387,7 @@ function App() {
               <SideBar />
               <div className="flex-1">
                 <Headerv2 />
-                <OrderDetailForSaleStaff />
+                <OrderDetail />
               </div>
             </div>
           }
@@ -400,8 +398,7 @@ function App() {
           element={
             <div className="flex flex-col">
               <Headerv2 />
-              <ListDelivered />
-              <OrderList />
+              <OrderListForDelivery />
             </div>
           }
         />
@@ -444,9 +441,7 @@ function App() {
         />
       </Routes>
     </Router>
-
   );
-
 }
 
 export default App;
