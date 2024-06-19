@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Button, Input, Upload, message, Form } from "antd";
+import { Button, Input, Upload, message, Form, Select, Card } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import { Card } from "antd";
 
+const { Option } = Select;
 const { TextArea } = Input;
 const { Dragger } = Upload;
 
@@ -36,7 +36,7 @@ const AddProduct = ({ onCreate }) => {
     }
     return isPng;
   };
-  console.log(setImagePreview)
+  console.log(setImagePreview);
   const [form] = Form.useForm();
 
   const handleFinish = (values) => {
@@ -80,7 +80,6 @@ const AddProduct = ({ onCreate }) => {
                 <Input placeholder="Type category here" />
               </Form.Item>
 
-
               <div className="grid grid-cols-2 gap-4">
                 <Form.Item
                   name="laborFee"
@@ -94,7 +93,21 @@ const AddProduct = ({ onCreate }) => {
                 >
                   <Input placeholder="$" />
                 </Form.Item>
-                
+                <Form.Item
+                  name="status"
+                  label="Status"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please select the product status!",
+                    },
+                  ]}
+                >
+                  <Select placeholder="Select status">
+                    <Option value="inStock">In Stock</Option>
+                    <Option value="outStock">Out of Stock</Option>
+                  </Select>
+                </Form.Item>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
